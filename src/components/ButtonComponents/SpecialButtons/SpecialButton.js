@@ -1,13 +1,12 @@
 import React from 'react';
 
 const SpecialButton = props => {
-  const { specialChar, displaySpecialChar, setDisplayState } = props;
+  const { specialChar, setDisplayState } = props;
 
   const specialCharSet = () => {
     if (specialChar === 'C') {
       setDisplayState(0);
     } else if (specialChar === '+/-') {
-      console.log(`clicked abs`);
     } else {
       console.log('other');
     }

@@ -7,8 +7,8 @@ import NumberButton from './NumberButton';
 
 const Numbers = props => {
   // STEP 2 - add the imported data to state
-  const { setDisplayState, numberChars } = props;
-  const strToNums = numberChars.map(numChar => {
+  const { setDisplayState, number } = props;
+  const strToNums = number.map(numChar => {
     // converts string nums to numerical version.
     if (numChar !== '.') {
       return Number(numChar);
@@ -20,11 +20,11 @@ const Numbers = props => {
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-      {strToNums.map((number, index) => {
+      {strToNums.map((num, index) => {
         return (
           <NumberButton
             setDisplayState={setDisplayState}
-            number={number}
+            number={num}
             key={index}
           />
         );

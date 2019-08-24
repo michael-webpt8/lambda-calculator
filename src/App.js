@@ -20,9 +20,9 @@ function App() {
 
   const [displayState, setDisplayState] = useState(0);
   const [specialsChars, setSpecialsChars] = useState(specials);
-  const [numberChars, setNumberChars] = useState(numbers);
+  const [number, setNumber] = useState(numbers);
   const [operationChars, setOperstationState] = useState(operators);
-  console.log('number', displayState, typeof displayState);
+
   return (
     <div className="container">
       <Logo />
@@ -33,14 +33,11 @@ function App() {
           <div className="specials-nums-container">
             <Specials
               specialsChars={specialsChars}
-              setNumberChars={setNumberChars}
+              setNumber={setNumber}
               setSpecialsChars={setSpecialsChars}
               setDisplayState={setDisplayState}
             />
-            <Numbers
-              numberChars={numberChars}
-              setDisplayState={setDisplayState}
-            />
+            <Numbers number={number} setDisplayState={setDisplayState} />
           </div>
         </div>
         <div className="operations-side">
