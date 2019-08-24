@@ -2,13 +2,13 @@ import React from 'react';
 
 import SpecialButton from './SpecialButton';
 
-import { specials } from '../../../data';
 const Specials = props => {
   // STEP 2 - add the imported data to state
-  const { setDisplayState } = props;
+  const { setDisplayState, specialsChars } = props;
+
   return (
     <div>
-      {specials.map((special, index) => {
+      {specialsChars.map((special, index) => {
         return (
           <SpecialButton
             special={special}

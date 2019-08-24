@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import OperatorButton from './OperatorButton';
-import { operators } from '../../../data';
+
 const Operators = props => {
-  const [operationState, setOperstationState] = useState(operators);
-  const { setDisplayState } = props;
+  const { setDisplayState, operationChars } = props;
   return (
     <div>
-      {operationState.map((operator, index) => {
+      {operationChars.map((operator, index) => {
         return (
           <OperatorButton
             setDisplayState={setDisplayState}

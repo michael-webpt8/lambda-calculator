@@ -3,6 +3,8 @@ import './App.css';
 // STEP 4 - import the button and display components
 // Don't forget to import any extra css/scss files you build into the correct component
 
+import { specials, operators, numbers } from './data';
+
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from './components/DisplayComponents/Logo';
 import Display from './components/DisplayComponents/Display';
@@ -17,6 +19,9 @@ function App() {
   // Don't forget to pass the functions (and any additional data needed) to the components as props
 
   const [displayState, setDisplayState] = useState(0);
+  const [specialsChars, setSpecialsChars] = useState(specials);
+  const [numberChars, setNumberChars] = useState(numbers);
+  const [operationChars, setOperstationState] = useState(operators);
 
   return (
     <div className="container">
@@ -26,12 +31,21 @@ function App() {
         <Display displayState={displayState} />
         <div className="specials-numbers-wrapper">
           <div className="specials-nums-container">
-            <Specials setDisplayState={setDisplayState} />
-            <Numbers setDisplayState={setDisplayState} />
+            <Specials
+              specialsChars={specialsChars}
+              setDisplayState={setDisplayState}
+            />
+            <Numbers
+              numberChars={numberChars}
+              setDisplayState={setDisplayState}
+            />
           </div>
         </div>
         <div className="operations-side">
-          <Operators setDisplayState={setDisplayState} />
+          <Operators
+            operationChars={operationChars}
+            setDisplayState={setDisplayState}
+          />
         </div>
       </div>
     </div>
