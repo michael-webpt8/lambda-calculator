@@ -6,8 +6,10 @@ const SpecialButton = props => {
   const specialCharSet = () => {
     if (specialChar === 'C') {
       setDisplayState(0);
+    } else if (specialChar === '+/-') {
+      console.log(`clicked abs`);
     } else {
-      console.log(`clicked ${specialChar}`);
+      console.log('other');
     }
   };
 
