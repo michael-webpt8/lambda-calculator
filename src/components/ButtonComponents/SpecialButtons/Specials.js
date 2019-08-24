@@ -4,15 +4,22 @@ import SpecialButton from './SpecialButton';
 
 const Specials = props => {
   // STEP 2 - add the imported data to state
-  const { setDisplayState, specialsChars } = props;
+  const {
+    setDisplayState,
+    specialsChars,
+    setSpecialsChars,
+    setNumberChars
+  } = props;
 
   return (
     <div>
-      {specialsChars.map((special, index) => {
+      {specialsChars.map((specialChar, index) => {
         return (
           <SpecialButton
-            special={special}
+            specialChar={specialChar}
             key={index}
+            setSpecialsChars={setSpecialsChars}
+            setNumberChars={setNumberChars}
             setDisplayState={setDisplayState}
           />
         );

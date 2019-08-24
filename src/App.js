@@ -22,7 +22,7 @@ function App() {
   const [specialsChars, setSpecialsChars] = useState(specials);
   const [numberChars, setNumberChars] = useState(numbers);
   const [operationChars, setOperstationState] = useState(operators);
-
+  console.log('specialCHARSET', numberChars);
   return (
     <div className="container">
       <Logo />
@@ -33,6 +33,8 @@ function App() {
           <div className="specials-nums-container">
             <Specials
               specialsChars={specialsChars}
+              setNumberChars={setNumberChars}
+              setSpecialsChars={setSpecialsChars}
               setDisplayState={setDisplayState}
             />
             <Numbers

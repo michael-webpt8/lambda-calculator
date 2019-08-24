@@ -1,17 +1,21 @@
 import React from 'react';
 
 const SpecialButton = props => {
-  const { special, setDisplayState } = props;
-  const specialBaseClass = `btn specials-btn`;
+  const { specialChar, displaySpecialChar, setDisplayState } = props;
 
-  const displaySpecialChar = () => {
-    setDisplayState(special);
+  const specialCharSet = () => {
+    if (specialChar === 'C') {
+      setDisplayState(0);
+    } else {
+      console.log(`clicked ${specialChar}`);
+    }
   };
 
+  const specialBaseClass = `btn specials-btn`;
   return (
     <>
-      <button onClick={displaySpecialChar} className={specialBaseClass}>
-        {special}
+      <button onClick={specialCharSet} className={specialBaseClass}>
+        {specialChar}
       </button>
     </>
   );
