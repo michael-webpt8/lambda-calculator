@@ -8,7 +8,6 @@ const NumberButton = props => {
   const numberDisplay = () => {
     setDisplayState(number);
   };
-
   return (
     <>
       <button onClick={numberDisplay} className={normalButtonClasses}>
