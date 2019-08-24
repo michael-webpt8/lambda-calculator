@@ -22,7 +22,7 @@ function App() {
   const [specialsChars, setSpecialsChars] = useState(specials);
   const [numberChars, setNumberChars] = useState(numbers);
   const [operationChars, setOperstationState] = useState(operators);
-  console.log('specialCHARSET', numberChars);
+  console.log('number', displayState, typeof displayState);
   return (
     <div className="container">
       <Logo />
